@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+<style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+        <link rel="stylesheet" href="style.css" />
+<style>
+.home-screen {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-screen .overlap-wrapper {
+    background-color: #000000;
+    overflow: hidden;
+    width: 430px;
+    height: 932px;
+}
+
+.home-screen .overlap {
+    position: relative;
+    width: 1118px;
+    height: 1358px;
+    top: -439px;
+    left: -72px;
+}
+
+.home-screen .element {
+    position: absolute;
+    width: 1110px;
+    height: 826px;
+    top: 5px;
+    left: 4px;
+    transform: rotate(0.55deg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 56%, rgba(0, 0, 0, 0) 100%);
+}
+
+.home-screen .iphone-status-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 226px;
+    position: absolute;
+    top: 455px;
+    left: 113px;
+}
+
+.home-screen .text-wrapper {
+    position: relative;
+    width: 43px;
+    height: 20px;
+    font-family: "Berlin Sans FB-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.home-screen .frame {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.home-screen .signal {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.home-screen .wi-fi {
+    position: relative;
+    width: 24px;
+    height: 22px;
+}
+
+.home-screen .full-battery {
+    position: relative;
+    width: 29px;
+    height: 32px;
+}
+
+.home-screen .div {
+    display: inline-flex;
+    flex-direction: column;
+    height: 852px;
+    align-items: flex-start;
+    gap: 30px;
+    position: absolute;
+    top: 506px;
+    left: 103px;
+    overflow-y: scroll;
+}
+
+.home-screen .div::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.home-screen .frame-wrapper {
+    display: flex;
+    width: 665px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    gap: 52px;
+    position: relative;
+}
+
+.home-screen .ellipse-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 50px;
+    border: 4px solid;
+    border-color: #ffffff24;
+}
+
+.home-screen .ellipse {
+    position: relative;
+    width: 55px;
+    height: 55px;
+}
+
+.home-screen .text-wrapper-2 {
+    position: relative;
+    width: 290px;
+    height: 57px;
+    font-family: "Orbitron-ExtraBold", Helvetica;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-screen .search-bar {
+    position: relative;
+    width: 370px;
+    height: 59px;
+    background-color: #cbcbcb26;
+    border-radius: 10px;
+}
+
+.home-screen .frame-2 {
+    display: flex;
+    width: 311px;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    position: relative;
+    top: 18px;
+    left: 29px;
+}
+
+.home-screen .text-wrapper-3 {
+    position: relative;
+    width: 230px;
+    margin-top: -1.00px;
+    margin-left: -6.42px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #cbcbcb;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-screen .logo {
+    position: relative;
+    width: 22px;
+    height: 20px;
+    margin-right: -6.42px;
+}
+
+.home-screen .frame-3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 47px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.home-screen .frame-4 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.home-screen .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #f5f5f5;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-screen .text-wrapper-5 {
+    position: relative;
+    width: 285px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #cbcbcb;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-screen .notification {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.home-screen .frame-5 {
+    display: inline-flex;
+    flex-direction: column;
+    height: 852px;
+    align-items: flex-start;
+    gap: 22px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.home-screen .frame-5::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.home-screen .overlap-group-wrapper {
+    position: relative;
+    width: 370px;
+    height: 196px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.home-screen .overlap-group {
+    position: relative;
+    height: 245px;
+    top: -25px;
+}
+
+.home-screen .rectangle {
+    position: absolute;
+    width: 370px;
+    height: 196px;
+    top: 25px;
+    left: 0;
+    border-radius: 0px 0px 20px 20px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+}
+
+.home-screen .frame-6 {
+    display: flex;
+    width: 325px;
+    align-items: center;
+    gap: 49px;
+    position: absolute;
+    top: 144px;
+    left: 22px;
+}
+
+.home-screen .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ececec;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-screen .p {
+    position: relative;
+    width: 217px;
+    margin-top: -4px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 400;
+    color: #ececec;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.home-screen .span {
+    font-weight: 700;
+}
+
+.home-screen .text-wrapper-7 {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+}
+
+.home-screen .text-wrapper-8 {
+    font-family: "Poppins-Regular", Helvetica;
+}
+
+.home-screen .right-arrow-wrapper {
+    display: flex;
+    width: 59px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 6px;
+    position: relative;
+    background-color: #ffffff33;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.home-screen .right-arrow {
+    position: relative;
+    width: 26px;
+    height: 32px;
+}
+
+.home-screen .overlap-2 {
+    position: relative;
+    width: 407px;
+    height: 344px;
+    top: -122px;
+    left: -19px;
+}
+
+.home-screen .rectangle-2 {
+    top: 122px;
+    left: 19px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 76%
+    );
+    position: absolute;
+    width: 370px;
+    height: 196px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.home-screen .frame-7 {
+    top: 241px;
+    left: 41px;
+    display: flex;
+    width: 325px;
+    align-items: center;
+    gap: 49px;
+    position: absolute;
+}
+
+.home-screen .text-wrapper-9 {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.home-screen .div-wrapper {
+    background-color: #ffffff2e;
+    display: flex;
+    width: 59px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 6px;
+    position: relative;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.home-screen .frame-8 {
+    position: absolute;
+    width: 26px;
+    height: 18px;
+    top: 133px;
+    left: 332px;
+}
+
+.home-screen .overlap-3 {
+    position: relative;
+    width: 430px;
+    height: 392px;
+    top: -72px;
+    left: -30px;
+}
+
+.home-screen .element-a-dc-de {
+    position: absolute;
+    width: 392px;
+    height: 392px;
+    top: 0;
+    left: 19px;
+}
+
+.home-screen .rectangle-3 {
+    top: 77px;
+    left: 30px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    position: absolute;
+    width: 370px;
+    height: 196px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.home-screen .frame-9 {
+    top: 191px;
+    left: 52px;
+    display: flex;
+    width: 325px;
+    align-items: center;
+    gap: 49px;
+    position: absolute;
+}
+
+.home-screen .frame-10 {
+    background-color: #ffffff3b;
+    display: flex;
+    width: 59px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 6px;
+    position: relative;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.home-screen .iphone-indicator {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 48px 101px;
+    position: absolute;
+    top: 111px;
+    left: 0;
+    background-color: #04040454;
+    backdrop-filter: blur(2px) brightness(100%);
+    -webkit-backdrop-filter: blur(2px) brightness(100%);
+}
+
+.home-screen .line {
+    position: relative;
+    width: 169px;
+    height: 5px;
+    margin-top: -34.50px;
+    margin-bottom: -34.50px;
+    background-color: #ffffff;
+    border-radius: 575.19px;
+}
+
+.home-screen .spasing {
+    position: relative;
+    width: 365px;
+    height: 198px;
+}
+
+.home-screen .frame-11 {
+    position: absolute;
+    width: 102px;
+    height: 64px;
+    top: 984px;
+    left: 373px;
+}
+</style>
+    </head>
+    <body>
+        <div class="home-screen">
+            <div class="overlap-wrapper">
+                <div class="overlap">
+                    <div class="element"></div>
+                    <div class="iphone-status-bar">
+                        <div class="text-wrapper">9.41</div>
+                        <div class="frame">
+                            <div class="signal"></div>
+                            <div class="wi-fi"></div>
+                            <div class="full-battery"></div>
+                        </div>
+                    </div>
+                    <div class="div">
+                        <div class="frame-wrapper">
+                            <div class="ellipse-wrapper"><img class="ellipse" src="img/ellipse-19.png" /></div>
+                        </div>
+                        <div class="text-wrapper-2">Welcome Cinematic Virtual Reality</div>
+                        <div class="search-bar">
+                            <div class="frame-2">
+                                <div class="text-wrapper-3">Search your favorite place...</div>
+                                <img class="logo" src="img/logo.svg" />
+                            </div>
+                        </div>
+                        <div class="frame-3">
+                            <div class="frame-4">
+                                <div class="text-wrapper-4">Top picks</div>
+                                <div class="text-wrapper-5">Let’s explore our programes</div>
+                            </div>
+                            <div class="notification"></div>
+                        </div>
+                        <div class="frame-5">
+                            <div class="overlap-group-wrapper">
+                                <div class="overlap-group">
+                                    <div class="rectangle"></div>
+                                    <div class="frame-6">
+                                        <div class="frame-4">
+                                            <div class="text-wrapper-6">Adventurer</div>
+                                            <p class="p">
+                                                <span class="span">VR</span>
+                                                <span class="text-wrapper-7">&nbsp;</span>
+                                                <span class="text-wrapper-8">Shows</span>
+                                            </p>
+                                        </div>
+                                        <div class="right-arrow-wrapper"><div class="right-arrow"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overlap-group-wrapper">
+                                <div class="overlap-2">
+                                    <div class="rectangle-2"></div>
+                                    <div class="frame-7">
+                                        <div class="frame-4">
+                                            <div class="text-wrapper-6">Insightful</div>
+                                            <p class="p">
+                                                <span class="span">Q</span>
+                                                <span class="text-wrapper-9">&amp;</span>
+                                                <span class="span">A</span>
+                                                <span class="text-wrapper-7">&nbsp;</span>
+                                                <span class="text-wrapper-8">Polls</span>
+                                            </p>
+                                        </div>
+                                        <div class="div-wrapper"><div class="right-arrow"></div></div>
+                                    </div>
+                                    <div class="frame-8"></div>
+                                </div>
+                            </div>
+                            <div class="overlap-group-wrapper">
+                                <div class="overlap-3">
+                                    <div class="element-a-dc-de"></div>
+                                    <div class="rectangle-3"></div>
+                                    <div class="frame-9">
+                                        <div class="frame-4">
+                                            <div class="text-wrapper-6">Cheering</div>
+                                            <p class="p"><span class="span">Leader</span> <span class="text-wrapper-8">board</span></p>
+                                        </div>
+                                        <div class="frame-10"><div class="right-arrow"></div></div>
+                                    </div>
+                                    <div class="iphone-indicator"><div class="line"></div></div>
+                                </div>
+                            </div>
+                            <div class="spasing"></div>
+                        </div>
+                    </div>
+                    <div class="frame-11"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
