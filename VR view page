@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+<style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+        <link rel="stylesheet" href="style.css" />
+<style>
+.VR-view-page {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.VR-view-page .div {
+    background-color: #000000;
+    width: 430px;
+    height: 932px;
+    position: relative;
+}
+
+.VR-view-page .overlap-group {
+    position: absolute;
+    width: 370px;
+    height: 791px;
+    top: 70px;
+    left: 30px;
+}
+
+.VR-view-page .frame {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 51px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.VR-view-page .element-rendering-planet {
+    position: relative;
+    width: 370px;
+    height: 370px;
+    border-radius: 40px;
+}
+
+.VR-view-page .frame-2 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 9px;
+    position: absolute;
+    top: 317px;
+    left: 209px;
+}
+
+.VR-view-page .div-wrapper {
+    display: flex;
+    width: 39px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 6px;
+    position: relative;
+    background-color: #ffffff26;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.VR-view-page .vr-glasses {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin-left: -0.50px;
+    margin-right: -0.50px;
+    transform: rotate(88.00deg);
+}
+
+.VR-view-page .mute {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    transform: rotate(87.00deg);
+}
+
+.VR-view-page .rotate {
+    position: relative;
+    width: 22px;
+    height: 23px;
+}
+
+.VR-view-page .frame-3 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 9px;
+    position: absolute;
+    top: 736px;
+    left: 204px;
+}
+
+.VR-view-page .frame-4 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 9px;
+    position: absolute;
+    top: 438px;
+    left: 252px;
+}
+
+.VR-view-page .zoom-in {
+    position: relative;
+    width: 17.82px;
+    height: 17.82px;
+    transform: rotate(90.00deg);
+}
+
+.VR-view-page .magnifying-glass {
+    position: relative;
+    width: 19.06px;
+    height: 18.86px;
+    transform: rotate(89.00deg);
+}
+
+.VR-view-page .frame-5 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 9px;
+    position: absolute;
+    top: 3px;
+    left: 257px;
+}
+
+.VR-view-page .overlap {
+    position: absolute;
+    width: 108px;
+    height: 51px;
+    top: 7px;
+    left: 20px;
+}
+
+.VR-view-page .button {
+    display: flex;
+    width: 105px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 23px 81px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background-color: #ffffff17;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+.VR-view-page .vector {
+    position: relative;
+    width: 22px;
+    height: 14px;
+    margin-top: -8.00px;
+    margin-bottom: -8.00px;
+    margin-left: -39.50px;
+    margin-right: -39.50px;
+    transform: rotate(-180deg);
+}
+
+.VR-view-page .frame-6 {
+    position: absolute;
+    width: 107px;
+    height: 51px;
+    top: 0;
+    left: 1px;
+}
+</style>
+    </head>
+    <body>
+        <div class="VR-view-page">
+            <div class="div">
+                <div class="overlap-group">
+                    <div class="frame">
+                        <div class="element-rendering-planet"></div>
+                        <div class="frame-2">
+                            <div class="div-wrapper"><div class="vr-glasses"></div></div>
+                            <div class="div-wrapper"><div class="mute"></div></div>
+                            <div class="div-wrapper"><div class="rotate"></div></div>
+                        </div>
+                        <div class="element-rendering-planet"></div>
+                        <div class="frame-3">
+                            <div class="div-wrapper"><div class="vr-glasses"></div></div>
+                            <div class="div-wrapper"><div class="mute"></div></div>
+                            <div class="div-wrapper"><div class="rotate"></div></div>
+                        </div>
+                        <div class="frame-4">
+                            <div class="div-wrapper"><div class="zoom-in"></div></div>
+                            <div class="div-wrapper"><div class="magnifying-glass"></div></div>
+                        </div>
+                    </div>
+                    <div class="frame-5">
+                        <div class="div-wrapper"><div class="zoom-in"></div></div>
+                        <div class="div-wrapper"><div class="magnifying-glass"></div></div>
+                    </div>
+                </div>
+                <div class="overlap">
+                    <div class="button"><img class="vector" src="img/vector.svg" /></div>
+                    <div class="frame-6"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
