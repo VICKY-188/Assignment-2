@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+
+        <link rel="stylesheet" href="style.css" />
+<style>
+.login-option-screen {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-option-screen .overlap-group-wrapper {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 430px;
+    height: 932px;
+}
+
+.login-option-screen .overlap-group {
+    position: relative;
+    width: 1426px;
+    height: 976px;
+    top: -44px;
+    left: -431px;
+}
+
+.login-option-screen .frame {
+    display: inline-flex;
+    flex-direction: column;
+    height: 103px;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 152px;
+    left: 476px;
+}
+
+.login-option-screen .app-name {
+    display: inline-flex;
+    flex-direction: column;
+    height: 151px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px 0px;
+    position: relative;
+    margin-top: -24.00px;
+    margin-bottom: -24.00px;
+}
+
+.login-option-screen .text-wrapper {
+    position: relative;
+    width: 322px;
+    height: 53px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.login-option-screen .div {
+    position: relative;
+    width: 322px;
+    height: 86px;
+    margin-top: -17px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 63px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.login-option-screen .frame-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 578px;
+    left: 476px;
+}
+
+.login-option-screen .title {
+    position: relative;
+    width: 263px;
+    margin-top: -1.00px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: -0.30px;
+    line-height: normal;
+}
+
+.login-option-screen .p {
+    position: relative;
+    width: 334px;
+    height: 86px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 19px;
+    letter-spacing: 1.43px;
+    line-height: 25.9px;
+}
+
+.login-option-screen .iphone-status-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 226px;
+    position: absolute;
+    top: 60px;
+    left: 472px;
+}
+
+.login-option-screen .text-wrapper-2 {
+    position: relative;
+    width: 43px;
+    height: 20px;
+    font-family: "Berlin Sans FB-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.login-option-screen .iphone-status-bar-2 {
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 226px;
+}
+
+.login-option-screen .frame-3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.login-option-screen .signal {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.login-option-screen .wi-fi {
+    position: relative;
+    width: 24px;
+    height: 22px;
+}
+
+.login-option-screen .full-battery {
+    position: relative;
+    width: 29px;
+    height: 32px;
+}
+
+.login-option-screen .text-wrapper-3 {
+    position: absolute;
+    width: 238px;
+    top: 862px;
+    left: 523px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-decoration: underline;
+}
+
+.login-option-screen .iphone-indicator {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 48px 101px;
+    position: absolute;
+    top: 944px;
+    left: 432px;
+    background-color: #04040454;
+    backdrop-filter: blur(2px) brightness(100%);
+    -webkit-backdrop-filter: blur(2px) brightness(100%);
+}
+
+.login-option-screen .line {
+    position: relative;
+    width: 169px;
+    height: 5px;
+    margin-top: -34.50px;
+    margin-bottom: -34.50px;
+    background-color: #ffffff;
+    border-radius: 575.19px;
+}
+
+.login-option-screen .space-galaxy {
+    position: absolute;
+    width: 1426px;
+    height: 976px;
+    top: 0;
+    left: 0;
+    background-color: #0000005c;
+}
+
+.login-option-screen .text-wrapper-4 {
+    position: absolute;
+    width: 238px;
+    top: 828px;
+    left: 544px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-decoration: underline;
+}
+
+.login-option-screen .frame-4 {
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+    height: 242px;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 346px;
+    left: 494px;
+}
+
+.login-option-screen .title-2 {
+    position: relative;
+    width: 263px;
+    margin-top: -1.00px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: -0.30px;
+    line-height: normal;
+}
+
+.login-option-screen .unlock-a-universe-of {
+    position: relative;
+    width: 334px;
+    height: 86px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 2.40px;
+    line-height: 43.6px;
+}
+
+.login-option-screen .span {
+    letter-spacing: 0.77px;
+}
+
+.login-option-screen .text-wrapper-5 {
+    font-size: 19px;
+    letter-spacing: 0.27px;
+    line-height: 25.9px;
+}
+
+.login-option-screen .iphone-status-bar-3 {
+    position: absolute;
+    top: 60px;
+    left: 485px;
+    display: inline-flex;
+    align-items: center;
+    gap: 226px;
+}
+
+.login-option-screen .button-wrapper {
+    position: absolute;
+    width: 337px;
+    height: 93px;
+    top: 711px;
+    left: 491px;
+}
+
+.login-option-screen .button {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    width: 329px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 23px 81px;
+    position: relative;
+    top: 9px;
+    left: 4px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.login-option-screen .start-learning {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 21px;
+    letter-spacing: 1.57px;
+    line-height: 28.6px;
+    white-space: nowrap;
+}
+
+.login-option-screen .vector {
+    position: relative;
+    width: 22px;
+    height: 14px;
+}
+
+.login-option-screen .frame-5 {
+    position: absolute;
+    width: 221px;
+    height: 34px;
+    top: 823px;
+    left: 549px;
+}
+</style>
+    </head>
+    <body>
+        <div class="login-option-screen">
+            <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                    <div class="frame">
+                        <div class="app-name">
+                            <div class="text-wrapper">Let’s float in</div>
+                            <div class="div">Universe</div>
+                        </div>
+                    </div>
+                    <div class="frame-2">
+                        <div class="title">Welcome</div>
+                        <p class="p">Unlock a universe of knowledge and adventure with your pass.</p>
+                    </div>
+                    <div class="iphone-status-bar">
+                        <div class="text-wrapper-2">9.41</div>
+                        <div class="iphone-status-bar-2">
+                            <div class="text-wrapper-2">9.41</div>
+                            <div class="frame-3">
+                                <div class="signal"></div>
+                                <div class="wi-fi"></div>
+                                <div class="full-battery"></div>
+                            </div>
+                        </div>
+                        <div class="frame-3">
+                            <div class="signal"></div>
+                            <div class="wi-fi"></div>
+                            <div class="full-battery"></div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper-3">Create new account</div>
+                    <div class="iphone-indicator"><div class="line"></div></div>
+                    <div class="space-galaxy"></div>
+                    <div class="text-wrapper-4">Create new account</div>
+                    <div class="frame-4">
+                        <div class="title-2">Welcome</div>
+                        <p class="unlock-a-universe-of">
+                            <span class="span">Unlock a universe of knowledge and adventure with your pass</span>
+                            <span class="text-wrapper-5">.</span>
+                        </p>
+                    </div>
+                    <div class="iphone-status-bar-3">
+                        <div class="text-wrapper-2">9.41</div>
+                        <div class="frame-3">
+                            <div class="signal"></div>
+                            <div class="wi-fi"></div>
+                            <div class="full-battery"></div>
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button">
+                            <div class="start-learning">Log In</div>
+                            <img class="vector" src="img/vector.svg" />
+                        </button>
+                    </div>
+                    <div class="frame-5"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
