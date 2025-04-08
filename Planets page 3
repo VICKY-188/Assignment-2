@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+<style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+</style>
+        <link rel="stylesheet" href="style.css" />
+<style>
+.planets-page {
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.planets-page .div {
+    background-color: #000000;
+    overflow: hidden;
+    width: 430px;
+    height: 932px;
+    position: relative;
+}
+
+.planets-page .overlap-group {
+    position: absolute;
+    width: 660px;
+    height: 451px;
+    top: -27px;
+    left: -124px;
+}
+
+.planets-page .overlap {
+    position: absolute;
+    width: 400px;
+    height: 83px;
+    top: 86px;
+    left: 124px;
+}
+
+.planets-page .frame {
+    display: inline-flex;
+    flex-direction: column;
+    height: 83px;
+    align-items: flex-start;
+    gap: 37px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    overflow-y: scroll;
+}
+
+.planets-page .frame::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.planets-page .frame-wrapper {
+    display: flex;
+    width: 370px;
+    align-items: center;
+    gap: 21px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.planets-page .frame-2 {
+    display: flex;
+    width: 319px;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    position: relative;
+}
+
+.planets-page .back {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: -3.00px;
+}
+
+.planets-page .app-name-wrapper {
+    display: flex;
+    width: 278px;
+    height: 73px;
+    align-items: center;
+    gap: 3px;
+    position: relative;
+    margin-right: -3.00px;
+}
+
+.planets-page .app-name {
+    display: flex;
+    flex-direction: column;
+    width: 239px;
+    height: 106px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px 0px;
+    position: relative;
+    margin-top: -16.50px;
+    margin-bottom: -16.50px;
+    overflow: hidden;
+}
+
+.planets-page .frame-3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: -83.00px;
+}
+
+.planets-page .text-wrapper {
+    position: relative;
+    width: 322px;
+    height: 26px;
+    margin-top: -1.00px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ececec;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.planets-page .planet-mars {
+    position: relative;
+    width: 239px;
+    height: 42px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 400;
+    color: #ececec;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 30px;
+}
+
+.planets-page .span {
+    font-weight: 600;
+    line-height: 76.6px;
+}
+
+.planets-page .text-wrapper-2 {
+    font-family: "Poppins-Regular", Helvetica;
+    line-height: 76.6px;
+}
+
+.planets-page .frame-4 {
+    position: absolute;
+    width: 84px;
+    height: 67px;
+    top: 4px;
+    left: 0;
+}
+
+.planets-page .iphone-status-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 226px;
+    position: absolute;
+    top: 43px;
+    left: 165px;
+}
+
+.planets-page .text-wrapper-3 {
+    position: relative;
+    width: 43px;
+    height: 20px;
+    font-family: "Berlin Sans FB-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.planets-page .frame-5 {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.planets-page .signal {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.planets-page .wi-fi {
+    position: relative;
+    width: 24px;
+    height: 22px;
+}
+
+.planets-page .full-battery {
+    position: relative;
+    width: 29px;
+    height: 32px;
+}
+
+.planets-page .text-wrapper-4 {
+    position: absolute;
+    height: 35px;
+    top: 415px;
+    left: 156px;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ececec;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.planets-page .iphone-indicator {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 48px 101px;
+    position: absolute;
+    top: 900px;
+    left: 1px;
+    background-color: #04040454;
+    backdrop-filter: blur(2px) brightness(100%);
+    -webkit-backdrop-filter: blur(2px) brightness(100%);
+}
+
+.planets-page .line {
+    position: relative;
+    width: 169px;
+    height: 5px;
+    margin-top: -34.50px;
+    margin-bottom: -34.50px;
+    background-color: #ffffff;
+    border-radius: 575.19px;
+}
+
+.planets-page .mars-often-called {
+    position: absolute;
+    width: 332px;
+    height: 262px;
+    top: 442px;
+    left: 32px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #cbcbcb;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.planets-page .button-wrapper {
+    position: absolute;
+    width: 410px;
+    height: 114px;
+    top: 722px;
+    left: 1px;
+}
+
+.planets-page .button {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    width: 370px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 17px 81px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.planets-page .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 21px;
+    letter-spacing: 1.57px;
+    line-height: 28.6px;
+    white-space: nowrap;
+}
+
+.planets-page .microsoft-hololens {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+</style>
+    </head>
+    <body>
+        <div class="planets-page">
+            <div class="div">
+                <div class="overlap-group">
+                    <div class="overlap">
+                        <div class="frame">
+                            <div class="frame-wrapper">
+                                <div class="frame-2">
+                                    <div class="back"></div>
+                                    <div class="app-name-wrapper">
+                                        <div class="app-name">
+                                            <div class="frame-3">
+                                                <div class="text-wrapper">Red Land</div>
+                                                <p class="planet-mars">
+                                                    <span class="span">Planet</span> <span class="text-wrapper-2"> Mars</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-4"></div>
+                    </div>
+                    <div class="iphone-status-bar">
+                        <div class="text-wrapper-3">9.41</div>
+                        <div class="frame-5">
+                            <div class="signal"></div>
+                            <div class="wi-fi"></div>
+                            <div class="full-battery"></div>
+                        </div>
+                    </div>
+                    <div class="text-wrapper-4">Planetary data for Earth</div>
+                </div>
+                <div class="iphone-indicator"><div class="line"></div></div>
+                <p class="mars-often-called">
+                    Mars, often called the &#39;Red Planet,&#39; is the fourth planet from the Sun in our solar system. It&#39;s a
+                    world of stark, otherworldly beauty, characterized by its rust-colored surface. Mars has fascinated
+                    astronomers and space enthusiasts for generations. It&#39;s a planet with a thin atmosphere, a history of
+                    possible liquid water, and it&#39;s a prime target for future exploration, including the search for signs of
+                    past or present life.
+                </p>
+                <div class="button-wrapper">
+                    <button class="button">
+                        <div class="text-wrapper-5">View in VR</div>
+                        <div class="microsoft-hololens"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
