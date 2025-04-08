@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+<style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
+}
+</style>
+
+        <link rel="stylesheet" href="style.css" />
+<style>
+.user-login-typing {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.user-login-typing .overlap-wrapper {
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 430px;
+    height: 932px;
+}
+
+.user-login-typing .overlap {
+    position: relative;
+    width: 1426px;
+    height: 976px;
+    top: -22px;
+    left: -33px;
+    background-color: #000000ab;
+}
+
+.user-login-typing .keypad-alpha {
+    position: absolute;
+    width: 430px;
+    height: 371px;
+    top: 583px;
+    left: 33px;
+}
+
+.user-login-typing .frame {
+    align-items: center;
+    gap: 31px;
+    position: absolute;
+    top: 198px;
+    left: 83px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.user-login-typing .frame-wrapper {
+    height: 166px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.user-login-typing .div {
+    align-items: flex-start;
+    gap: 23px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.user-login-typing .field {
+    position: relative;
+    width: 297px;
+    height: 52px;
+    margin-right: -2.00px;
+}
+
+.user-login-typing .overlap-group {
+    position: relative;
+    width: 295px;
+    height: 52px;
+}
+
+.user-login-typing .rectangle {
+    position: absolute;
+    width: 295px;
+    height: 52px;
+    top: 0;
+    left: 0;
+}
+
+.user-login-typing .vector {
+    position: absolute;
+    width: 295px;
+    height: 1px;
+    top: 52px;
+    left: 0;
+    object-fit: cover;
+}
+
+.user-login-typing .email-address {
+    position: absolute;
+    width: 238px;
+    top: 16px;
+    left: 0;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.user-login-typing .img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 14px;
+    left: 256px;
+}
+
+.user-login-typing .text-wrapper {
+    position: absolute;
+    width: 238px;
+    top: 16px;
+    left: 0;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.user-login-typing .button {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    width: 329px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 23px 81px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.user-login-typing .start-learning {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 21px;
+    letter-spacing: 1.57px;
+    line-height: 28.6px;
+    white-space: nowrap;
+}
+
+.user-login-typing .vector-2 {
+    position: relative;
+    width: 22px;
+    height: 14px;
+}
+
+.user-login-typing .text-wrapper-2 {
+    position: relative;
+    width: 238px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-decoration: underline;
+}
+</style>
+    </head>
+    <body>
+        <div class="user-login-typing">
+            <div class="overlap-wrapper">
+                <div class="overlap">
+                    <div class="keypad-alpha"></div>
+                    <div class="frame">
+                        <div class="frame-wrapper">
+                            <div class="div">
+                                <div class="field">
+                                    <div class="overlap-group">
+                                        <div class="rectangle"></div>
+                                        <img class="vector" src="img/vector-1.svg" />
+                                        <input class="email-address" placeholder="Email Address" type="email" id="input-2" />
+                                        <img class="img" src="img/email-icon.svg" />
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="overlap-group">
+                                        <img class="img" src="img/lock-icon.svg" />
+                                        <img class="vector" src="img/image.svg" />
+                                        <div class="rectangle"></div>
+                                        <label class="text-wrapper" for="input-2">Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button">
+                            <div class="start-learning">Log In</div>
+                            <img class="vector-2" src="img/vector.svg" />
+                        </button>
+                        <div class="text-wrapper-2">Forgot Password?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
